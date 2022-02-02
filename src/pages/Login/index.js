@@ -1,4 +1,4 @@
-import { Container } from "../../components/Container/Container";
+import { ContainerOne } from "../../components/Container/Container";
 import Button from "../../components/FormComponents/Button";
 import { Form } from "../../components/FormComponents/Form";
 import { Input } from "../../components/FormComponents/Input";
@@ -6,7 +6,7 @@ import StyledLink from "../../components/FormComponents/StyledLink";
 
 export default function Login() {
     return (
-        <Container>
+        <ContainerOne>
             <h1>MyWallet</h1>
             <Form>
                 <Input
@@ -22,7 +22,7 @@ export default function Login() {
                 <Button type="submit">Entrar</Button>
             </Form>
             <StyledLink to="/register">Primeira vez? Cadastre-se!</StyledLink>
-        </Container>
+        </ContainerOne>
 
     );
 }

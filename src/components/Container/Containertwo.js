@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
-
-const ContainerOne=styled.div`
+const ContainerTwo=styled.div`
 width:100%;
-height: 100vh;
+height: 546px;
 background-color: #8C11BE;   
 display: flex;
 align-items: center;
-justify-content: center;
 flex-direction: column;
 
 h1{
@@ -16,6 +14,4 @@ h1{
     color: #FFFFFF;
 }
 `
-export{
-    ContainerOne
-}
+export default ContainerTwo;
