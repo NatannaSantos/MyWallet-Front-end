@@ -53,9 +53,14 @@ font-size: 17px;
 font-weight: 700;
 
 `
-const BalanceValue=styled.p`
+const BalanceValue=styled.div`
 font-size: 17px;
 color:${(props)=>props.isNegative?'red':'green'};
+`
+const ButtonDelete=styled.p`
+font-size: 16px;
+color:#C6C6C6;
+margin-left:5px;
 `
 export {
     StyledWallet,
@@ -64,5 +69,6 @@ export {
     StyledExtract,
     Balance,
     BalanceDescription,
-    BalanceValue
+    BalanceValue,
+    ButtonDelete
 }

@@ -17,7 +17,7 @@ export default function Wallet() {
     const [transaction, setTransaction] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [balance, setBalance] = useState(null);
-    const [isNegative,setIsNegative]=useState(false)
+    const [isNegative, setIsNegative] = useState(false)
     let finalBalance = 0;
 
     useEffect(() => {
@@ -42,9 +42,9 @@ export default function Wallet() {
                     finalBalance -= parseFloat(transactions.value.replace(',', '.'));
                 }
             })
-           
+
             setBalance(parseFloat(finalBalance).toFixed(2));
-            if(finalBalance<0){
+            if (finalBalance < 0) {
                 setIsNegative(true);
             }
         });
@@ -58,7 +58,20 @@ export default function Wallet() {
     if (isLoading) {
         return <h1>Carregando...</h1>;
     }
-   
+    function handleDeleteTransaction(id) {
+        if (!window.confirm("Confirma a exclusão da transação selecionada?")) {
+            return;
+        }
+
+        const promise = api.deleteTransaction(id, auth.token);
+        promise.then(() => {
+            handleLoadTransaction();
+        });
+
+    }
+
+
+
 
     function handleDeleteUser() {
         delete auth.token;
@@ -66,7 +79,6 @@ export default function Wallet() {
     }
 
     return (
-
         <>
             <StyledHeader>
                 <h1>Olá,{auth.name}</h1>
@@ -75,11 +87,13 @@ export default function Wallet() {
             <ContainerTwo>
                 <StyledWallet>
                     <StyledExtract>
-                        <ExtractList transaction={transaction} />
+                        <ExtractList transaction={transaction} handleDeleteTransaction={handleDeleteTransaction} />
                     </StyledExtract>
                     <Balance>
                         <BalanceDescription>SALDO</BalanceDescription>
-                        <BalanceValue isNegative={isNegative}>R${balance}</BalanceValue>
+                        <BalanceValue isNegative={isNegative}>
+                            R${balance}
+                        </BalanceValue>
                     </Balance>
                 </StyledWallet>
                 <ContainerButtons>

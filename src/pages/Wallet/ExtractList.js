@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import Extract from "./Extract";
 
-function ExtractList({ transaction }) {
-
+function ExtractList({ transaction,handleDeleteTransaction}) {
 
     if (transaction.length === 0) {
         return (
@@ -17,7 +16,7 @@ function ExtractList({ transaction }) {
             <Extract
                 key={transaction._id}
                 {...transaction}
-                
+                handleDeleteTransaction={handleDeleteTransaction}                
             />
             
 

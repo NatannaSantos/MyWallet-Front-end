@@ -33,12 +33,18 @@ function transaction(body) {
     const promise = axios.post(`${BASE_URL}/transaction`,body);
     return promise;
 }
+function deleteTransaction(id,token){
+    const config = createConfig(token);
+    const promise = axios.delete(`${BASE_URL}/transaction/${id}`, config);
+    return promise;
+}
 const api = {
     login,
     register,
     getUser,
     getTransaction,
-    transaction
+    transaction,
+    deleteTransaction
 }
 
 export default api;

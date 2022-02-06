@@ -3,7 +3,10 @@ import styled from "styled-components";
 const Container=styled.div`
 width:325px;
 display: flex;
-padding: 10px;
+padding-right: 20px;
+padding-left:15px;
+padding-bottom: 10px;
+padding-top:10px;
 justify-content: space-between;
 `
 const Description=styled.div`
@@ -18,7 +21,8 @@ margin-right: 10px;
 `
 const Value = styled.div`
 font-size: 16px;
-color: ${(props)=>props.type==='entry'?'#57AE26':'#C83022'}
+color: ${(props)=>props.type==='entry'?'#57AE26':'#C83022'};
+display:flex;
 `
 export{
     Container,
