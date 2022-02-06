@@ -5,6 +5,12 @@ width: 326px;
 height: 446px;
 background-color: #FFFFFF;
 border-radius: 5px;
+position: relative;
+`
+const StyledExtract=styled.div`
+width:326px;
+height:345px;
+overflow-y: scroll;
 `
 const ContainerButtons=styled.div`
 width: 375px;
@@ -32,8 +38,31 @@ img{
     margin-bottom: 30px;
 }
 `
+const Balance=styled.div`
+width: 326px;
+padding: 10px;
+display: flex;
+background-color: #FFFFFF;
+border-radius:5px;
+justify-content: space-between;
+position:absolute;
+bottom:5px;
+`
+const BalanceDescription=styled.p`
+font-size: 17px;
+font-weight: 700;
+
+`
+const BalanceValue=styled.p`
+font-size: 17px;
+color:${(props)=>props.isNegative?'red':'green'};
+`
 export {
     StyledWallet,
     ContainerButtons,
-    StyledButton
+    StyledButton,
+    StyledExtract,
+    Balance,
+    BalanceDescription,
+    BalanceValue
 }

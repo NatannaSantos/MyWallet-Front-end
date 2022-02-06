@@ -6,6 +6,7 @@ export function AuthProvider({ children }) {
   //const persistedAuth = JSON.parse(localStorage.getItem("auth"));
   //const [auth, setAuth] = useState(persistedAuth);
   const [auth, setAuth] = useState();
+  
 
   function login(authData) {
     console.log(authData);

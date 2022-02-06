@@ -1,13 +1,27 @@
-import { StyledWallet } from "./style"
 import styled from "styled-components";
+import Extract from "./Extract";
 
-function ExtractList() {
-    return(
-    <StyledWallet>
-        <Subtitle>
-            Não há registros de {<br />} entrada ou saída
-        </Subtitle>
-    </StyledWallet>
+function ExtractList({ transaction }) {
+
+
+    if (transaction.length === 0) {
+        return (
+            <Subtitle>
+                Não há registros de {<br />} entrada ou saída
+            </Subtitle>
+        );
+    }
+
+    return (
+        transaction.map((transaction) => (
+            <Extract
+                key={transaction._id}
+                {...transaction}
+                
+            />
+            
+
+        ))
     );
 }
 const Subtitle = styled.p`
