@@ -41,7 +41,7 @@ img{
 const Balance=styled.div`
 width: 326px;
 padding: 10px;
-display: flex;
+display: ${props=>props.transaction.length===0?"none":"flex"};
 background-color: #FFFFFF;
 border-radius:5px;
 justify-content: space-between;
@@ -61,6 +61,7 @@ const ButtonDelete=styled.p`
 font-size: 16px;
 color:#C6C6C6;
 margin-left:5px;
+cursor: pointer;
 `
 export {
     StyledWallet,

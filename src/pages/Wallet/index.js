@@ -27,26 +27,29 @@ export default function Wallet() {
         }
         handleLoadTransaction();
     }, []);
+  
     function handleLoadTransaction() {
         const promise = api.getTransaction(auth.token);
         promise.then((response) => {
             const transactionUser = response.data;
             setTransaction(transactionUser);
-            console.log(response.data);
             setIsLoading(false);
 
             transactionUser.map(transactions => {
                 if (transactions.type === 'entry') {
-                    finalBalance += parseFloat(transactions.value.replace(',', '.'));
+                    finalBalance += parseFloat(transactions.value.replace(',','.'));
                 } else {
-                    finalBalance -= parseFloat(transactions.value.replace(',', '.'));
+                    finalBalance -= parseFloat(transactions.value.replace(',','.'));
                 }
             })
-
-            setBalance(parseFloat(finalBalance).toFixed(2));
             if (finalBalance < 0) {
                 setIsNegative(true);
+            } else{
+                setIsNegative(false);
             }
+
+            setBalance(parseFloat(finalBalance).toFixed(2));
+            
         });
         promise.catch((error) => {
             console.log(error.response);
@@ -54,6 +57,7 @@ export default function Wallet() {
         });
 
     }
+   
 
     if (isLoading) {
         return <h1>Carregando...</h1>;
@@ -89,7 +93,7 @@ export default function Wallet() {
                     <StyledExtract>
                         <ExtractList transaction={transaction} handleDeleteTransaction={handleDeleteTransaction} />
                     </StyledExtract>
-                    <Balance>
+                    <Balance transaction={transaction}>
                         <BalanceDescription>SALDO</BalanceDescription>
                         <BalanceValue isNegative={isNegative}>
                             R${balance}

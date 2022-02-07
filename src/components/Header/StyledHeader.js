@@ -13,5 +13,8 @@ h1{
     font-weight: 700;
     color:#FFFFFF;
 }
+img{
+    cursor:pointer;
+}
 `
 export default StyledHeader;
