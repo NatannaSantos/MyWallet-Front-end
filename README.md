@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# MyWallet Front-end
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application allows the user to have a personal financial control, where the user adds their financial inputs and outputs and the application adds up their final amount and shows it to the user.
+
+![myWallet](https://user-images.githubusercontent.com/93724285/154353367-634ea8ed-29fa-45e0-8e2b-cf39d2739ca0.gif)
+
 
 ## Available Scripts
 
