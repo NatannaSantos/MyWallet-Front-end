@@ -12,9 +12,10 @@ This project aims to help the client with his personal financial control. It sim
 The motivation for carrying out the project was the interest in financial applications.
 
 features to be implemented:
+
 *Edit transaction records
 
 ## Technologies
 <p>
-  <img style='margin: 5px;' src=https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB>
+  <img style='margin: 5px;' src="https://img.shields.io/badge/react-app%20-%2320232a.svg?&style=for-the-badge&color=60ddf9&logo=react&logoColor=%2361DAFB"/>
 </p>
