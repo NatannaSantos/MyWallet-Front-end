@@ -13,7 +13,7 @@ The motivation for carrying out the project was the interest in financial applic
 
 features to be implemented:
 
-*Edit transaction records
+* Edit transaction records
 
 ## Technologies
 <p>
@@ -22,3 +22,17 @@ features to be implemented:
   <img style='margin: 5px;' src="https://img.shields.io/badge/react-app%20-%2320232a.svg?&style=for-the-badge&color=60ddf9&logo=react&logoColor=%2361DAFB"/>
   <img style='margin: 5px;' src="https://img.shields.io/badge/react_route%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
 </p>
+
+## How to run
+
+1. Clone this repository
+2. Clone the back-end repository at https://github.com/NatannaSantos/MyWallet-Back-end
+3. Follow instructions to run back-end at https://github.com/NatannaSantos/MyWallet-Back-end
+4. 4. Install dependencies
+```bash
+npm i
+```
+5. Run the front-end with
+```bash
+npm start
+```
