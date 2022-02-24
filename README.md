@@ -28,7 +28,7 @@ features to be implemented:
 1. Clone this repository
 2. Clone the back-end repository at https://github.com/NatannaSantos/MyWallet-Back-end
 3. Follow instructions to run back-end at https://github.com/NatannaSantos/MyWallet-Back-end
-4. 4. Install dependencies
+4. Install dependencies
 ```bash
 npm i
 ```
@@ -36,3 +36,4 @@ npm i
 ```bash
 npm start
 ```
+6. Finally access http://localhost:3000
