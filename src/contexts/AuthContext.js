@@ -7,7 +7,7 @@ export function AuthProvider({ children }) {
   const [auth, setAuth] = useState(persistedAuth);
   
   function login(authData) {
-     setAuth(authData);
+    setAuth(authData);
     localStorage.setItem("auth", JSON.stringify(authData));
   }
 
